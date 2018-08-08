@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
@@ -52,7 +53,10 @@ namespace UrhoCustomObj.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
-                Xamarin.Forms.Forms.Init(e);
+                Xamarin.Forms.Forms.Init(e, new[]
+                    {
+                        typeof(Urho.Forms.UwpSurfaceRenderer).GetTypeInfo().Assembly
+                    });
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

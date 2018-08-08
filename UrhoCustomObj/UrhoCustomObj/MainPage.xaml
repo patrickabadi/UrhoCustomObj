@@ -4,11 +4,10 @@
              xmlns:local="clr-namespace:UrhoCustomObj"
              x:Class="UrhoCustomObj.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+  <ContentPage.Content>
+    <Grid>
+      <local:UrhoView x:Name="UrhoView"/>
+    </Grid>
+  </ContentPage.Content>
 
 </ContentPage>

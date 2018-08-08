@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Meshes\Model.obj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Meshes\Model.obj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="UrhoSharp.Forms" Version="1.8.93" />
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.561731" />
   </ItemGroup>
 </Project>
