@@ -6,7 +6,17 @@
 
   <ContentPage.Content>
     <Grid>
-      <local:UrhoView x:Name="UrhoView"/>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+
+      <local:UrhoView x:Name="UrhoView" Grid.RowSpan="3"/>
+
+      <Button x:Name="ColouredButton" Grid.Row="1" Text="Coloured" Clicked="ColouredButton_Clicked"/>
+      <Button x:Name="TexturedButton" Grid.Row="2" Text="Textured" Clicked="TexturedButton_Clicked"/>
+
     </Grid>
   </ContentPage.Content>
 
